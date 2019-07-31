@@ -2,8 +2,9 @@
 import React, { Component } from 'react'
 import './App.css'
 
-const GIT_USER = ''
-const GIT_USER_URL = `https://api.github.com/users/${GIT_USER}/events`
+const GIT_USERS = ['']
+const GIT_USER_URL = 'https://api.github.com/users/'
+const GIT_EVENT_POSTFIX = '/events'
 
 export default class App extends Component {
   render() {

@@ -1,23 +1,26 @@
-/* eslint-disable no-unused-vars */
-import React, { Component } from 'react'
-import './App.css'
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-const GIT_USER = ''
-const GIT_USER_URL = `https://api.github.com/users/${GIT_USER}/events`
-
-export default class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App_score">
-          n/a
-        </div>
-        <button
-          type="button"
-          className="App_button"
-          children="Get Score"
-        />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
+
+export default App;

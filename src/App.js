@@ -1,28 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './RentPath.svg'
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className="logo" alt="logo" />
+      <div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          Refer to the <code>README.md</code> file for instructions.
         </p>
-
-        <h1>score: n/a</h1>
-        <button
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="score">
+          <span className="label">score:</span> n/a
+        </div>
+        <button className="button">
           Get Score
         </button>
-      </header>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

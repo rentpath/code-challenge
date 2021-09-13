@@ -13,19 +13,6 @@
   margin-bottom: 50px;
 }
 
-.score {
-  font-size: calc(10px + 2vmin);
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.label {
-  font-weight: bolder;
-}
-
-.button {
-  color: black;
+code {
   background-color: lightgray;
-  font-size: calc(10px + 2vmin);
-  border-radius: 8px;
 }

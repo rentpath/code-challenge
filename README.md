@@ -1,68 +1,51 @@
 ## Getting Started
 
-1. [Make sure Yarn is installed](https://classic.yarnpkg.com/en/docs/install)
-2. Run the following to run the react server
+This app can be ran with either `npm` or `yarn` ([yarn](https://classic.yarnpkg.com/en/docs/install)
+should be slightly faster). After running the start script, the client will load in your default
+browser.
+
+`npm`
+```sh
+npm install
+npm run start
 ```
+
+`yarn`
+```sh
 yarn
 yarn start
 ```
 
 
-## Coding Exercise (30 min)
+## Coding Challenge
 
-Coding Exercise Instructions (30 minutes)
+GitHub's RESTful API provides data for a user's interactions within the platform. The following URL
+will provide data for the user `dhh`:
 
-If you look at the following URL https://api.github.com/users/dhh/events,
-you will see a response containing data that is a history of the events of
-dhh's interactions with github.
+- https://api.github.com/users/dhh/events
 
-Your task is to update the react application to do the following:
 
-When the "Get Score" button is clicked, the application should
-read the JSON response from the URL and calculate a score for
-the users interactions.
+For this React application, when the `Get Score` button is clicked, the application should parse the
+data from the above URL and calculate a "score" from the interactions listed.
 
-The score is calculated from the "type" key value pair, where
-- PushEvent = 5 points
-- PullRequestReviewCommentEvent = 4 points
-- WatchEvent = 3 points.
-- CreateEvent = 2 points.
-- Every other event = 1 point.
+The score is calculated from the value of `"type"`, where...
+- `"PushEvent"` = 5 points
+- `"PullRequestEvent"` = 4 points
+- `"WatchEvent"` = 3 points
+- `"CreateEvent"` = 2 points
+-  every other event = 1 point
 
-Once calculated, the score should be rendered in place of the "n/a".
+Once calculated, this score should replace the `n/a` text.
 
-### bonus
-- Add a text input, whose value acts as a score multiplier.
+
+### Bonus
+
+ Add an `<input>` element whose value acts as a score multiplier.
+
 
 ---
 
-## Lead Instructions
+### Lead Candidates
 
-Coding Exercise Instructions (30 minutes)
-
-If you look at the following URL https://api.github.com/users/dhh/events,
-you will see a response containing data that is a history of the events of
-dhh's interactions with github.
-
-Your task is to update the react application to do the following:
-
-For the two users dhh and jashkenas
-
-When the "Get Score" button is clicked, the application should read
-the JSON response from the URL and calculate a score for the combined
-users interactions.
-
-- PushEvent = 5 points
-- PullRequestReviewCommentEvent = 4 points
-- WatchEvent = 3 points.
-- CreateEvent = 2 points.
-- Every other event = 1 point.
-
-Once calculated, the combined score should be rendered in place of the
-"n/a".
-
-Add two more fields below the combined score to represent each user's
-score with their username as a label
-
-### bonus
-- Add a text input, whose value acts as a combined score multiplier.
+In addition to fetching data for user `dhh`, also fetch data for user `jashkenas`. Both users will
+be scored based on the same pointing system, and their _combined score_ should be displayed.
